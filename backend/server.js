@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // This middleware will now intercept every request
 // and add the corresponding cors headers to the response.
 const corsOptions = {
-    origin: 'http://example.com',
+    origin: 'http://localhost:4200',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 app.use(cors(corsOptions))
@@ -23,12 +23,10 @@ app.get('/', (req, res) => {
 });
 
 app.route('/api/cats').get((req, res) => {
-    res.send({
-        cats: [
+    res.send([
             { name: 'lilly' },
             { name: 'lucy' }
-        ]
-    });
+        ]);
 });
 
 app.route('/api/cats/:name').get((req, res) => {
