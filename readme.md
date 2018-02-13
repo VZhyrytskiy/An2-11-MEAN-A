@@ -1,4 +1,4 @@
-## Branch t01_setupbackend
+## Branch t01_setup_backend
 1. Создать папку backend
 2. Создать package.json
 3. Создать файл .gitignore 
