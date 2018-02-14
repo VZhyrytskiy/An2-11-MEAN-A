@@ -7,9 +7,10 @@ import { CoreModule } from './core/core.module';
 import { MaterialModule } from './shared/material/material.module';
 
 import { AppComponent } from './app.component';
+import { MessagesComponent } from './components';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MessagesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

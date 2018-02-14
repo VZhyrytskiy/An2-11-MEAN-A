@@ -1,3 +1,10 @@
+## Branch t06_disply_messages
+1. Добавить MatCardModule в MaterialModule
+2. Добавить в ApiService публичное свойтво messages
+3. Создать MessagesComponent в папке components для отображения сообщений
+4. Добавить MessagesComponent в разметку AppComponent
+5. Очистить класс AppComponent
+
 ## Branch t05_angular_material
 1. Выполнить все шаги согласно инструкции https://material.angular.io/guide/getting-started
 2. Создать shared модуль MaterialModule и включить в него модуль MatButtonModule. Подключить к приложению
