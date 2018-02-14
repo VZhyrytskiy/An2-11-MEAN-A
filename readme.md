@@ -1,3 +1,6 @@
+## Branch t03_sending_data_w_node
+1. Внести изменения в server.js: отправлять данные по урлу localhost:3000/posts
+
 ## Branch t02_setup_frontend
 1. Сгенерить приложение Angular, используя Angular CLI в папке frontend
 
