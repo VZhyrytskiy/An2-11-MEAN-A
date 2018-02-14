@@ -1,3 +1,8 @@
+## Branch t05_angular_material
+1. Выполнить все шаги согласно инструкции https://material.angular.io/guide/getting-started
+2. Создать shared модуль MaterialModule и включить в него модуль MatButtonModule. Подключить к приложению
+3. Добавить кнопку в разметку AppComponent
+
 ## Branch t04_getting_data
 1. Создать модуль CoreModule и подключить в AppModule
 2. Создать сервис ApiService для получения данных
