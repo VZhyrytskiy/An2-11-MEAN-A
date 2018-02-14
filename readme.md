@@ -1,3 +1,9 @@
+## Branch t04_getting_data
+1. Создать модуль CoreModule и подключить в AppModule
+2. Создать сервис ApiService для получения данных
+3. Установить пакет cors для backend
+4. В AppComponent использовать сервис и вывести данные в консоль
+
 ## Branch t03_sending_data_w_node
 1. Внести изменения в server.js: отправлять данные по урлу localhost:3000/posts
 
