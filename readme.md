@@ -1,3 +1,11 @@
+##Branch t08_create_user_w_mongo
+1. Создать акаунт на mlab.com
+2. Создать базу данных an5
+3. Создать пользователя базы данных test с паролем test
+4. Установить mongoose http://mongoosejs.com
+5. Создать модель пользователя - models/user.js
+6. Сделать изменения в server.js
+
 ## Branch t07_register_endpoint
 1. Установить глобально пакет nodemon
 2. Установить для backend пакет body-parser
