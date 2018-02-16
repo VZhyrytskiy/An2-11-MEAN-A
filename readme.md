@@ -1,3 +1,9 @@
+## Branch t07_register_endpoint
+1. Установить глобально пакет nodemon
+2. Установить для backend пакет body-parser
+3. Установить postman extension для Хром
+4. Внести изменения в server.js
+
 ## Branch t06_disply_messages
 1. Добавить MatCardModule в MaterialModule
 2. Добавить в ApiService публичное свойтво messages
