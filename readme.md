@@ -1,3 +1,11 @@
+##Branch t10_loggin_in
+1. Установить для backend пакет jwt-simple
+2. Внести изменения в server.js
+3. Создать AuthService, перераспределить функционал между ApiService и AuthService
+4. Внести изменения в RegisterComponent, использовать AuthService
+5. Создать LoginComponent
+6. Добавить роут для LoginComponent
+
 ##Branch t09_create_register_view
 1. Подключить модули MatToolbarModule, MatInputModule 
 2. Подключить FormsModule

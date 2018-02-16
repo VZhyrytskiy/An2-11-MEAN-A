@@ -9,10 +9,10 @@ import { MaterialModule } from './shared/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { MessagesComponent, RegisterComponent } from './components';
+import { LoginComponent, MessagesComponent, RegisterComponent } from './components';
 
 @NgModule({
-  declarations: [AppComponent, MessagesComponent, RegisterComponent],
+  declarations: [AppComponent, MessagesComponent, RegisterComponent, LoginComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

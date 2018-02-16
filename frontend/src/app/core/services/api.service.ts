@@ -14,8 +14,4 @@ export class ApiService {
       this.messages = <Array<any>>res;
     });
   }
-
-  sendUserRegistration(registerData) {
-    this.http.post(`${this.baseUrl}register`, registerData).subscribe(res => { });
-  }
 }
