@@ -19,6 +19,19 @@ app.get('/posts', (req, res) => {
   res.send(posts);
 });
 
+app.get('/users', async (req, res) => {
+  try {
+    var users = await User.find(
+      {}, // <--- empty objects means the entire list of users
+      '-pwd -__v' // <--- remove property pwd, __v
+    );
+    res.send(users);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
 app.post('/register', (req, res) => {
   var userData = req.body;
 
@@ -41,15 +54,11 @@ app.post('/login', async (req, res) => {
   var user = await User.findOne({ email: userData.email });
 
   if (!user) {
-    return res
-      .status(404)
-      .send({ message: 'Email or Password is invalid' });
+    return res.status(404).send({ message: 'Email or Password is invalid' });
   }
 
   if (userData.pwd !== user.pwd) {
-    return res
-      .status(404)
-      .send({ message: 'Email or Password is invalid' });
+    return res.status(404).send({ message: 'Email or Password is invalid' });
   }
 
   var payload = {};

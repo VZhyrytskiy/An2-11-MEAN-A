@@ -1,3 +1,9 @@
+##Branch t11_showing_user_list
+1. Внести изменения в server.js
+2. Внести изменения в ApiService
+3. Создать UsersComponent
+4. Добавить роут users и profile/:id
+
 ##Branch t10_loggin_in
 1. Установить для backend пакет jwt-simple
 2. Внести изменения в server.js
