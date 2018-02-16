@@ -27,19 +27,15 @@ app.post('/register', (req, res) => {
     if (err) {
       console.log('saving user error');
     }
-    res.sendStatus(200);
+    res.send({ status: 'OK' });
   });
 });
 
 // Подключаемся к БД
-mongoose.connect(
-  'mongodb://test:test@ds239368.mlab.com:39368/an5',
-  { useMongoClient: true },
-  err => {
-    if (!err) {
-      console.log('Connected to Mongo.');
-    }
+mongoose.connect('mongodb://test:test@ds239368.mlab.com:39368/an5', err => {
+  if (!err) {
+    console.log('Connected to Mongo.');
   }
-);
+});
 
 app.listen(3000);

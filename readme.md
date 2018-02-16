@@ -1,3 +1,11 @@
+##Branch t09_create_register_view
+1. Подключить модули MatToolbarModule, MatInputModule 
+2. Подключить FormsModule
+3. Создать RegisterComponent
+4. Создать AppRoutingModule и подключить его в AppModule
+5. Внести изменения в разметку AppComponent
+6. Внести изменения в Apiservice
+
 ##Branch t08_create_user_w_mongo
 1. Создать акаунт на mlab.com
 2. Создать базу данных an5
