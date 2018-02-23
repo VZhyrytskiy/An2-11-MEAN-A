@@ -17,6 +17,21 @@
         [(ngModel)]="registerData.pwd"
         name="pwd">
       </mat-input-container>
+      <br>
+
+      <mat-input-container>
+        <input type="text" matInput placeholder="name"
+        [(ngModel)]="registerData.name"
+        name="name">
+      </mat-input-container>
+      <br>
+
+      <mat-input-container class="w100">
+        <textarea matInput placeholder="description"
+        [(ngModel)]="registerData.description"
+        name="description"></textarea>
+      </mat-input-container>
+      <br>
 
       <button mat-raised-button color="primary"
       (click)="post()">Register</button>

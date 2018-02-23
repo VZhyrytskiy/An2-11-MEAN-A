@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   RegisterComponent,
   LoginComponent,
-  UsersComponent
+  UsersComponent,
+  ProfileComponent
 } from './components';
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'profile/:id',
-    component: UsersComponent
+    component: ProfileComponent
   }
 ];
 

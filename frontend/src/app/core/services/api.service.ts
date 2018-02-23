@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { Observable } from 'rxjs/Observable';
+
 @Injectable()
 export class ApiService {
   messages: Array<any>;
@@ -20,5 +22,9 @@ export class ApiService {
     this.http.get(`${this.baseUrl}users`).subscribe(res => {
       this.users = <Array<any>>res;
     });
+  }
+
+  getProfile(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}profile/${id}`);
   }
 }

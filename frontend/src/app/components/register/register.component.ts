@@ -9,7 +9,9 @@ import { AuthService } from '../../core';
 export class RegisterComponent implements OnInit {
   registerData = {
     email: '',
-    pwd: ''
+    pwd: '',
+    name: '',
+    description: ''
   };
 
   constructor(private auth: AuthService) {}

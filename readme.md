@@ -1,8 +1,19 @@
+##Branch t12_user_profile
+1. Для шифрования пароля установить bcrypt-nodejs для бекенда и изменить модель.
+2. Внести изменения в server.js. 
+    Добавить роут profile/:id, 
+    внести изменения в модель
+    внести изменения в роут login
+3. Добавить ProfileComponent
+4. Добавить модуль MatListModule
+5. Внести изменения в ApiService
+6. Добавить дополнительные поля для RegisterComponent
+
 ##Branch t11_showing_user_list
 1. Внести изменения в server.js
 2. Внести изменения в ApiService
 3. Создать UsersComponent
-4. Добавить роут users и profile/:id
+4. Добавить роут users profile/:id
 
 ##Branch t10_loggin_in
 1. Установить для backend пакет jwt-simple

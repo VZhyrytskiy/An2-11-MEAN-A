@@ -13,7 +13,8 @@ import {
   LoginComponent,
   MessagesComponent,
   RegisterComponent,
-  UsersComponent
+  UsersComponent,
+  ProfileComponent
 } from './components';
 
 @NgModule({
@@ -22,7 +23,8 @@ import {
     MessagesComponent,
     RegisterComponent,
     LoginComponent,
-    UsersComponent
+    UsersComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
