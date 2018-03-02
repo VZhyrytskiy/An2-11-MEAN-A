@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { ApiService } from '../../core';
 
 @Component({
@@ -7,11 +9,10 @@ import { ApiService } from '../../core';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-
-  constructor(public api: ApiService) {}
+  constructor(public api: ApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.api.getMessages();
+    const userId = this.route.snapshot.paramMap.get('id');
+    this.api.getMessages(userId);
   }
-
 }

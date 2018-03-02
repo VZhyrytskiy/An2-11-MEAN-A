@@ -6,7 +6,8 @@ import {
   RegisterComponent,
   LoginComponent,
   UsersComponent,
-  ProfileComponent
+  ProfileComponent,
+  PostComponent
 } from './components';
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'profile/:id',
     component: ProfileComponent
+  },
+  {
+    path: '',
+    component: PostComponent
   }
 ];
 

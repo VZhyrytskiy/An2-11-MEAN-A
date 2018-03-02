@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class AuthService {
-  private baseUrl = 'http://localhost:3000/';
+  private baseUrl = 'http://localhost:3000/auth/';
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class AuthService {
   loginUser(loginData) {
     this.http
       .post(`${this.baseUrl}login`, loginData)
-      .subscribe((res: {token: string}) => {
+      .subscribe((res: { token: string }) => {
         console.log(res);
         localStorage.setItem('token', res.token);
       });

@@ -14,7 +14,8 @@ import {
   MessagesComponent,
   RegisterComponent,
   UsersComponent,
-  ProfileComponent
+  ProfileComponent,
+  PostComponent
 } from './components';
 
 @NgModule({
@@ -24,7 +25,8 @@ import {
     RegisterComponent,
     LoginComponent,
     UsersComponent,
-    ProfileComponent
+    ProfileComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

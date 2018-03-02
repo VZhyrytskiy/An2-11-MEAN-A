@@ -12,10 +12,14 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  getMessages() {
-    this.http.get(`${this.baseUrl}posts`).subscribe(res => {
+  getMessages(userId: string) {
+    this.http.get(`${this.baseUrl}posts/${userId}`).subscribe(res => {
       this.messages = <Array<any>>res;
     });
+  }
+
+  postMessage(message: { msg: string }) {
+    this.http.post(`${this.baseUrl}post`, message).subscribe(res => {});
   }
 
   getUsers() {
