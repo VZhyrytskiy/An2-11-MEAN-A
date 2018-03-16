@@ -2,6 +2,7 @@ var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const jwt = require('jwt-simple');
 
 // Models
 const User = require('./models/user');
@@ -19,15 +20,17 @@ mongoose.Promise = Promise;
 app.use(cors());
 app.use(bodyParser.json());
 
+
+
 app.get('/posts/:id', async (req, res) => {
   const author = req.params.id;
   const posts = await Post.find({ author });
   res.send(posts);
 });
 
-app.post('/post', (req, res) => {
+app.post('/post', auth.checkAuthenticated, (req, res) => {
   const postData = req.body;
-  postData.author = '5a9921eebbef0e415c4d5ea1';
+  postData.author = req.userId;
 
   const post = new Post(postData);
 
@@ -77,5 +80,5 @@ mongoose.connect('mongodb://test:test@ds239368.mlab.com:39368/an5', err => {
   }
 });
 
-app.use('/auth', auth);
+app.use('/auth', auth.router);
 app.listen(3000);

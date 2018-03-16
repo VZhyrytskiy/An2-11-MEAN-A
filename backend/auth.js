@@ -10,15 +10,15 @@ router.post('/register', (req, res) => {
 
   // создаем пользователя и сохраняем в БД
   var user = new User(userData);
-  user.save((err, result) => {
+  user.save((err, newUser) => {
     if (err) {
       // console.log('saving user error');
-      return res.status(404).send({
+      return res.status(500).send({
         message: 'Saving User Error'
       });
     }
 
-    res.send(result);
+    createSendToken(res, newUser);
   });
 });
 
@@ -43,14 +43,47 @@ router.post('/login', async (req, res) => {
       });
     }
 
-    var payload = {};
-    var secret = '123'; // <--- TODO: replace
-    var token = jwt.encode(payload, secret);
-
-    res.status(200).send({
-      token
-    });
+    createSendToken(res, user);
   });
 });
 
-module.exports = router;
+function createSendToken(res, user) {
+  const payload = {
+    sub: user._id
+  };
+  const secret = '123'; // <--- TODO: replace
+  const token = jwt.encode(payload, secret);
+
+  res.status(200).send({
+    token
+  });
+}
+
+const auth = {
+  router,
+  checkAuthenticated: (req, res, next) => {
+    if (!req.header('authorization')) {
+      return res
+        .status(401)
+        .send({ message: 'Unauthorized. Missing Auth Header' });
+    }
+
+    // format is: 'token NFLJLNKLJRLKGJLFJIOERUO'
+    const token = req.header('authorization').split(' ')[1];
+
+    const secret = '123';
+    const payload = jwt.decode(token, secret);
+
+    if (!payload) {
+      return res
+        .status(401)
+        .send({ message: 'Unauthorized. Auth Header Invalid' });
+    }
+
+    req.userId = payload.sub;
+
+    next();
+  }
+};
+
+module.exports = auth;
