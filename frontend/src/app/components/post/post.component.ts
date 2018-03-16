@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiService } from '../../core';
 
 @Component({
@@ -6,7 +6,7 @@ import { ApiService } from '../../core';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostComponent {
   postMsg = '';
 
   constructor(public api: ApiService) {}
